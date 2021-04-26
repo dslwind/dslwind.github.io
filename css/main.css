@@ -1294,7 +1294,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #2d95e3;
+  background: #c4ff09;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1729,10 +1729,6 @@ pre .javascript .function {
   line-height: 1;
   margin: -20px auto 15px;
   text-align: center;
-}
-.post-body code {
-  color: #ff7600;
-  background: none;
 }
 .post-sticky-flag {
   display: inline-block;
