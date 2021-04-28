@@ -29,9 +29,10 @@
 <meta property="og:description" content="Windows Terminal Yes!!!">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-06-22T00:16:30.000Z">
-<meta property="article:modified_time" content="2021-04-27T14:59:40.401Z">
+<meta property="article:modified_time" content="2021-04-28T13:37:49.930Z">
 <meta property="article:author" content="dslwind">
 <meta property="article:tag" content="折腾">
+<meta property="article:tag" content="Windows">
 <meta property="article:tag" content="terminal">
 <meta name="twitter:card" content="summary">
 
@@ -136,14 +137,9 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
@@ -227,7 +223,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-27 22:59:40" itemprop="dateModified" datetime="2021-04-27T22:59:40+08:00">2021-04-27</time>
+        <time title="修改时间：2021-04-28 21:37:49" itemprop="dateModified" datetime="2021-04-28T21:37:49+08:00">2021-04-28</time>
       </span>
 
   
@@ -238,14 +234,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -260,7 +256,13 @@
 <span id="more"></span>
 
 <p><strong>2021-04-19 更新：</strong><br>Windows 10 bulid 21337 及之后的版本内置了 Windows Terminal，右键菜单自带“Open in Windows Terminal”项，无需自行修改。</p>
-<p>本文所述方法适用于旧的 Windows10 版本。</p>
+<p>在新版本上如需禁用，则将以下内容保存到扩展名为<code>.reg</code>的文件中，并双击打开。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line"><span class="section">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]</span></span><br><span class="line"><span class="attr">&quot;&#123;9F156763-7844-4DC4-B2B1-901F640F5155&#125;&quot;</span>=-</span><br></pre></td></tr></table></figure>
+
+<p>如需再次启用，则将以下内容保存到扩展名为<code>.reg</code>的文件中，并双击打开。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line"><span class="section">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]</span></span><br><span class="line"><span class="attr">&quot;&#123;9F156763-7844-4DC4-B2B1-901F640F5155&#125;&quot;</span>=<span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>以下方法适用于旧的 Windows10 版本。</p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>将以下代码保存到扩展名为 <code>.reg</code> 的文件中，双击打开</p>
 <h2 id="需要按住-shift-右键打开"><a href="#需要按住-shift-右键打开" class="headerlink" title="需要按住 shift + 右键打开"></a>需要按住 shift + 右键打开</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line"><span class="section">[HKEY_CLASSES_ROOT\Directory\Background\shell\wt]</span></span><br><span class="line">@=&quot;Windows Terminal Here&quot;</span><br><span class="line"><span class="attr">&quot;Extended&quot;</span>=<span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command]</span></span><br><span class="line">@=&quot;C:\\Users\\你的用户名\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe&quot;</span><br></pre></td></tr></table></figure>
 
@@ -305,6 +307,7 @@
 
           <div class="post-tags">
               <a href="/tags/%E6%8A%98%E8%85%BE/" rel="tag"><i class="fa fa-tag"></i> 折腾</a>
+              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
               <a href="/tags/terminal/" rel="tag"><i class="fa fa-tag"></i> terminal</a>
           </div>
 
@@ -351,13 +354,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">38k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">34 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
