@@ -21,31 +21,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dslwind.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:true,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeIn&quot;,&quot;post_body&quot;:&quot;fadeIn&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeIn&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script>
-<meta name="description" content="GitHub 项目地址">
+<meta name="description" content="船新的游戏体验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用frp实现内网穿透">
-<meta property="og:url" content="https://dslwind.github.io/2019-05-19-frp/">
+<meta property="og:title" content="古剑MOD">
+<meta property="og:url" content="https://dslwind.github.io/2020-06-02-gujian-mod/">
 <meta property="og:site_name" content="水木风的个人博客">
-<meta property="og:description" content="GitHub 项目地址">
+<meta property="og:description" content="船新的游戏体验">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-05-18T19:06:48.000Z">
+<meta property="article:published_time" content="2020-06-02T00:52:00.000Z">
 <meta property="article:modified_time" content="2021-05-01T14:38:38.699Z">
 <meta property="article:author" content="dslwind">
-<meta property="article:tag" content="折腾">
-<meta property="article:tag" content="frp">
-<meta property="article:tag" content="内网穿透">
-<meta property="article:tag" content="远程桌面">
+<meta property="article:tag" content="游戏">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dslwind.github.io/2019-05-19-frp/">
+<link rel="canonical" href="https://dslwind.github.io/2020-06-02-gujian-mod/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dslwind.github.io&#x2F;2019-05-19-frp&#x2F;&quot;,&quot;path&quot;:&quot;2019-05-19-frp&#x2F;&quot;,&quot;title&quot;:&quot;使用frp实现内网穿透&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dslwind.github.io&#x2F;2020-06-02-gujian-mod&#x2F;&quot;,&quot;path&quot;:&quot;2020-06-02-gujian-mod&#x2F;&quot;,&quot;title&quot;:&quot;古剑MOD&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>使用frp实现内网穿透 | 水木风的个人博客</title><script src="/js/config.js"></script>
+<title>古剑MOD | 水木风的个人博客</title><script src="/js/config.js"></script>
   
 
 
@@ -122,7 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">1.</span> <span class="nav-text">服务端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">2.</span> <span class="nav-text">客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-1"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="nav-number">2.2.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A0%E6%9D%90%E6%8F%90%E5%8F%96"><span class="nav-number">1.</span> <span class="nav-text">素材提取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A4%E5%89%91-MOD-%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">古剑 MOD 辅助工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NVidia-PS-%E6%8F%92%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">NVidia PS 插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E9%A2%84%E8%A7%88%E5%B7%A5%E5%85%B7"><span class="nav-number">4.</span> <span class="nav-text">模型预览工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%A3%85%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB"><span class="nav-number">5.</span> <span class="nav-text">外装对应关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B7%E8%A3%85"><span class="nav-number">5.1.</span> <span class="nav-text">男装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%B3%E8%A3%85"><span class="nav-number">5.2.</span> <span class="nav-text">女装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%B8%AA-interesting-%E7%9A%84%E5%A4%96%E8%A3%85"><span class="nav-number">5.3.</span> <span class="nav-text">几个 interesting 的外装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5"><span class="nav-number">6.</span> <span class="nav-text">相关链接</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -193,7 +190,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2019-05-19-frp/">
+    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2020-06-02-gujian-mod/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://tvax2.sinaimg.cn/large/7fa1e0d7ly1ff52f888f4j20md0mbwh0.jpg">
@@ -206,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          使用frp实现内网穿透
+          古剑MOD
         </h1>
 
         <div class="post-meta-container">
@@ -217,7 +214,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-05-19 03:06:48" itemprop="dateCreated datePublished" datetime="2019-05-19T03:06:48+08:00">2019-05-19</time>
+      <time title="创建时间：2020-06-02 08:52:00" itemprop="dateCreated datePublished" datetime="2020-06-02T08:52:00+08:00">2020-06-02</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
@@ -235,14 +232,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -253,48 +250,332 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">GitHub 项目地址</a></p>
+        <p><del>船新的游戏体验</del></p>
 <span id="more"></span>
 
-<h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>从<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp/releases">Release 页面</a>下载最新版本并解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf frp.tar.gz &amp;&amp; <span class="built_in">cd</span> frp</span><br></pre></td></tr></table></figure>
-
-<p>将 <code>frps</code> 复制到 <code>/usr/bin</code>目录下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp frps /usr/bin/</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
-<li><p>修改 <code>frps.ini</code> 文件，添加密码和 udp 端口用于点对点内网穿透。</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## frps.ini</span></span><br><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">bind_port</span> = <span class="number">7000</span></span><br><span class="line"><span class="attr">token</span> = <span class="number">12345678</span></span><br><span class="line"><span class="attr">bind_udp_port</span> = <span class="number">7001</span></span><br></pre></td></tr></table></figure></li>
-<li><p>设置开机启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/frp</span><br><span class="line">cp frps.ini /etc/frp/frps.ini</span><br><span class="line">cp systemd/frps.service /etc/systemd/system/frps.service</span><br><span class="line">systemctl <span class="built_in">enable</span> frps</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>启动 frp 并设置开机自启：<code>systemctl enable frps</code></li>
-<li>启动 frp：<code>systemctl start frps</code></li>
-<li>查看 frp 运行状态：<code>systemctl status frps</code></li>
-<li>重启 frp 服务：<code>systemctl restart frps</code></li>
-</ul>
-</li>
-</ol>
-<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>客户端的安装方法与服务端类似，需将将<code>frps</code>换成<code>frpc</code>。</p>
-<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p>修改<code>frpc.ini</code></p>
-<ol>
-<li><p>ssh</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## frpc.ini</span></span><br><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = x.x.x.x</span><br><span class="line"><span class="attr">server_port</span> = <span class="number">7000</span></span><br><span class="line"></span><br><span class="line"><span class="section">[ssh]</span></span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">local_port</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">6000</span></span><br></pre></td></tr></table></figure></li>
-<li><p>点对点内网穿透</p>
-<p>启动 frpc，转发内网的 ssh 服务，配置如下，不需要指定远程端口:</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## frpc.ini</span></span><br><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = x.x.x.x</span><br><span class="line"><span class="attr">server_port</span> = <span class="number">7000</span></span><br><span class="line"></span><br><span class="line"><span class="section">[p2p_ssh]</span></span><br><span class="line"><span class="attr">type</span> = xtcp</span><br><span class="line"><span class="comment">## 只有 sk 一致的用户才能访问到此服务</span></span><br><span class="line"><span class="attr">sk</span> = abcdefg</span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">local_port</span> = <span class="number">22</span></span><br></pre></td></tr></table></figure>
-
-<p>在要访问这个服务的机器上启动另外一个 frpc，配置如下:</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## frpc.ini</span></span><br><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = x.x.x.x</span><br><span class="line"><span class="attr">server_port</span> = <span class="number">7000</span></span><br><span class="line"></span><br><span class="line"><span class="section">[p2p_ssh_visitor]</span></span><br><span class="line"><span class="attr">type</span> = xtcp</span><br><span class="line"><span class="comment">## xtcp 的访问者</span></span><br><span class="line"><span class="attr">role</span> = visitor</span><br><span class="line"><span class="comment">## 要访问的 xtcp 代理的名字</span></span><br><span class="line"><span class="attr">server_name</span> = p2p_ssh</span><br><span class="line"><span class="attr">sk</span> = abcdefg</span><br><span class="line"><span class="comment">## 绑定本地端口用于访问 ssh 服务</span></span><br><span class="line"><span class="attr">bind_addr</span> = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">bind_port</span> = <span class="number">6000</span></span><br></pre></td></tr></table></figure></li>
-<li><p>微软远程桌面（RDP）</p>
-<p>frp 也可以用于转发内网的 Windows 远程桌面，配置如下：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#frpc.ini</span></span><br><span class="line"><span class="section">[RDP]</span></span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_port</span> = <span class="number">3389</span></span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">6001</span></span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是，使用 RDP 必须设置 Windows 账户的密码，否则无法连接。</p>
-</li>
-</ol>
-<p>参考：<a target="_blank" rel="noopener" href="https://gofrp.org/docs/">frp 文档</a></p>
+<h2 id="素材提取"><a href="#素材提取" class="headerlink" title="素材提取"></a>素材提取</h2><p>游戏解包软件 <a target="_blank" rel="noopener" href="https://pigspy.ys168.com/">RPGViewer</a></p>
+<p>用<code>RPGViwer</code>解包游戏数据，注意不同 <code>zpk</code> 文件要解包在不同的文件夹里，古剑一的解包数据软件不会自动分类，当然同样的文件名只是有些文件名 zpk 有数字的这种可以解包在同样的文件夹里。然后修改好文件后，你解包的哪个文件，就在游戏目录下该文件的同级目录下新建一个同名文件夹，然后把修改后的文件，按照解包的该文件所在的路径放到那个同名文件里的相同路径下。</p>
+<h2 id="古剑-MOD-辅助工具"><a href="#古剑-MOD-辅助工具" class="headerlink" title="古剑 MOD 辅助工具"></a>古剑 MOD 辅助工具</h2><p>将文件解压，得到两个文件<code>GameServices.dll</code>、<code>GJPatch.ini</code>和文件夹<code>Patches</code>，放到游戏<code>Bin</code>目录下。</p>
+<p>例如：解包的是游戏目录<code>Data\Objects</code>文件夹里的<code>characters.zpk</code>文件，修改的是解包目录里的<code>texture</code>文件夹里的<code>101-01.dds</code>，那么你把修改后的<code>101-01.dds</code>放到游戏目录<code>Data\Objects\characters\texture</code>里。<br>然后开始游戏换上对应外装即可。</p>
+<h2 id="NVidia-PS-插件"><a href="#NVidia-PS-插件" class="headerlink" title="NVidia PS 插件"></a>NVidia PS 插件</h2><p><a target="_blank" rel="noopener" href="https://developer.nvidia.com/sites/default/files/akamai/tools/files/Photoshop_Plugins_x64_8.55.0109.1800.exe">64 位</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.nvidia.com/sites/default/files/akamai/tools/files/Photoshop_Plugins_8.55.0109.1800.exe">32 位</a></p>
+<p>贴图修改完成后保存时注意勾选<code>alpha 通道</code>，存储格式选<code>DXT3</code>或<code>DXT5</code>。其中，DXT3 可很好地用于 Alpha 通道锐利、对比强烈的半透和镂空材质，适用于铁栏杆等 Alpha 边缘清晰的贴图。而 DXT5 则更适合 Alpha 通道柔和的材质，适用于头发等 Alpha 过渡柔和的贴图。</p>
+<p>Alpha 通道的纯黑部分在游戏里不显示，纯白部分显示，灰色则为半透明。因此可以通过涂黑某些部分使其达到透明或者半透明效果。</p>
+<h2 id="模型预览工具"><a href="#模型预览工具" class="headerlink" title="模型预览工具"></a>模型预览工具</h2><p><a target="_blank" rel="noopener" href="https://github.com/niftools/nifskope/releases">NifSkope</a></p>
+<p>打开外装对应 <code>nif</code> 文件，在预览窗口选择组件，右键 <code>Block -&gt; Remove</code> 查看效果，再修改贴图。</p>
+<h2 id="外装对应关系"><a href="#外装对应关系" class="headerlink" title="外装对应关系"></a>外装对应关系</h2><h3 id="男装"><a href="#男装" class="headerlink" title="男装"></a>男装</h3><table>
+<thead>
+<tr>
+<th>屠苏</th>
+<th>名称</th>
+<th>兰生</th>
+<th>名称</th>
+<th>千觞</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>101</td>
+<td>南疆玄衫</td>
+<td>102</td>
+<td>青青子衿</td>
+<td>103</td>
+<td>江湖布衣</td>
+</tr>
+<tr>
+<td>101_ws012</td>
+<td>黑骑士</td>
+<td>102_ws012</td>
+<td>国王</td>
+<td>103_ws010</td>
+<td>波澜壮阔</td>
+</tr>
+<tr>
+<td>101_ws016</td>
+<td>梦魂</td>
+<td>st158</td>
+<td>方胜短襦</td>
+<td>st167</td>
+<td>绛绸袍</td>
+</tr>
+<tr>
+<td>st151</td>
+<td>铭袍</td>
+<td>st162</td>
+<td>霜纹锦袍</td>
+<td>st169</td>
+<td>太极道袍</td>
+</tr>
+<tr>
+<td>st154</td>
+<td>黑貂裘</td>
+<td>st164</td>
+<td>赤铁金袍</td>
+<td>st171</td>
+<td>流云法袍</td>
+</tr>
+<tr>
+<td>st155</td>
+<td>魔影鬼衣</td>
+<td>st165</td>
+<td>乾坤祭服</td>
+<td>st172</td>
+<td>仙符罡衣</td>
+</tr>
+<tr>
+<td>st156</td>
+<td>噬魄妖铠</td>
+<td>st166</td>
+<td>晓梦迷蝶</td>
+<td>st174</td>
+<td>混元宝衣</td>
+</tr>
+<tr>
+<td>st157</td>
+<td>幽皇软胄</td>
+<td>wj036</td>
+<td>隔世旧梦</td>
+<td>ws001</td>
+<td>西疆客</td>
+</tr>
+<tr>
+<td>ws015</td>
+<td>阎浮百劫</td>
+<td>wl001</td>
+<td>西域王子</td>
+<td>ws002</td>
+<td>灵巫祭衣</td>
+</tr>
+<tr>
+<td>wt001</td>
+<td>天方夜谭</td>
+<td>wl002</td>
+<td>海之子</td>
+<td>ws003</td>
+<td>迷彩</td>
+</tr>
+<tr>
+<td>wt002</td>
+<td>天墉道袍</td>
+<td>wl003</td>
+<td>酒之品</td>
+<td>ws004</td>
+<td>酒之魂</td>
+</tr>
+<tr>
+<td>wt003</td>
+<td>肃穆</td>
+<td>wl004</td>
+<td>蓝鲲</td>
+<td>ws005</td>
+<td>大狗</td>
+</tr>
+<tr>
+<td>wt004_1</td>
+<td>酒之韵</td>
+<td>wl005</td>
+<td>庖丁</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>wt005</td>
+<td>黑猫</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="女装"><a href="#女装" class="headerlink" title="女装"></a>女装</h3><table>
+<thead>
+<tr>
+<th>晴雪</th>
+<th>名称</th>
+<th>襄铃</th>
+<th>名称</th>
+<th>红玉</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>104</td>
+<td>风雪初晴</td>
+<td>105</td>
+<td>灵狐初现</td>
+<td>106</td>
+<td>千年玉红</td>
+</tr>
+<tr>
+<td>104_ws012</td>
+<td>白骑士</td>
+<td>105_ws012</td>
+<td>公主</td>
+<td>106_ws013</td>
+<td>情报官</td>
+</tr>
+<tr>
+<td>104_ws013</td>
+<td>迷彩少女</td>
+<td>105_ws013</td>
+<td>游戏里未出现</td>
+<td>st_124</td>
+<td>扫霞衣</td>
+</tr>
+<tr>
+<td>104_ws015</td>
+<td>紫绡浣花</td>
+<td>st129</td>
+<td>鸳鸯兜</td>
+<td>st109</td>
+<td>游戏里未出现</td>
+</tr>
+<tr>
+<td>st105_01</td>
+<td>百香衫</td>
+<td>st131</td>
+<td>百绣锦袄</td>
+<td>st121</td>
+<td>游戏里未出现</td>
+</tr>
+<tr>
+<td>st115</td>
+<td>紫凰衫</td>
+<td>st133</td>
+<td>白羽鲛纱</td>
+<td>st123</td>
+<td>游 戏里未出现</td>
+</tr>
+<tr>
+<td>st116</td>
+<td>明锦霞衣</td>
+<td>st136</td>
+<td>凤羽明锦</td>
+<td>st125</td>
+<td>云影</td>
+</tr>
+<tr>
+<td>st118</td>
+<td>夜月清霜</td>
+<td>st137</td>
+<td>浣星纱</td>
+<td>st126</td>
+<td>紫狩仙衣</td>
+</tr>
+<tr>
+<td>wq001</td>
+<td>百花穿蝶袖</td>
+<td>wx001</td>
+<td>凫靥裘</td>
+<td>st127</td>
+<td>游戏里未出现</td>
+</tr>
+<tr>
+<td>wq002</td>
+<td>凤羲祭衣</td>
+<td>wx002</td>
+<td>玲珑</td>
+<td>st128</td>
+<td>清虚舞</td>
+</tr>
+<tr>
+<td>wq003</td>
+<td>热情</td>
+<td>wx003</td>
+<td>晨光熹微</td>
+<td>st180</td>
+<td>羲和幻裳</td>
+</tr>
+<tr>
+<td>wq004</td>
+<td>赤霞云纱</td>
+<td>wx004</td>
+<td>熊猫</td>
+<td>wh001</td>
+<td>天墉道袍</td>
+</tr>
+<tr>
+<td>wq005</td>
+<td>绵羊</td>
+<td>wx005</td>
+<td>小侍女</td>
+<td>wh002</td>
+<td>婉约</td>
+</tr>
+<tr>
+<td>wq006</td>
+<td>温暖午后</td>
+<td></td>
+<td></td>
+<td>wh003</td>
+<td>焰云霞舞</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>wh004</td>
+<td>兔女郎</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>wh005_01</td>
+<td>管家</td>
+</tr>
+</tbody></table>
+<h3 id="几个-interesting-的外装"><a href="#几个-interesting-的外装" class="headerlink" title="几个 interesting 的外装"></a>几个 interesting 的外装</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>人物</th>
+<th>外装</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>104_st113</td>
+<td>晴雪</td>
+<td>玄锦玉衣</td>
+</tr>
+<tr>
+<td>104_wq002</td>
+<td>晴雪</td>
+<td>凤羲祭衣</td>
+</tr>
+<tr>
+<td>104_wq004</td>
+<td>晴雪</td>
+<td>赤霞云纱</td>
+</tr>
+<tr>
+<td>105_wq004</td>
+<td>襄铃</td>
+<td>晨光熹微</td>
+</tr>
+<tr>
+<td>106_st126</td>
+<td>红玉</td>
+<td>紫绶仙衣</td>
+</tr>
+<tr>
+<td>106_wq004</td>
+<td>红玉</td>
+<td>焰云霞舞</td>
+</tr>
+<tr>
+<td>b20</td>
+<td>幽都巫姑</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><p><a target="_blank" rel="noopener" href="https://game.ali213.net/thread-6519031-1-1.html">古剑3MOD工具</a></p>
+<p>下载链接:<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Osxf3F3n7Z9x4WTnLE9pMQ">https://pan.baidu.com/s/1Osxf3F3n7Z9x4WTnLE9pMQ</a> 提取码:811w </p>
+<p><a target="_blank" rel="noopener" href="https://xgodgame.blogspot.com/2018/09/blog-post_3.html">古剑3攻略集</a></p>
+<p><a target="_blank" rel="noopener" href="https://jiangyuedaihe.lofter.com/tag/mod%E8%B5%84%E6%BA%90%E4%B8%8E%E6%95%99%E7%A8%8B">古剑mod资源与教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://jiangyuedaihe.lofter.com/tag/%E5%8F%A4%E5%89%91mod">古剑MOD</a></p>
 
     </div>
 
@@ -312,7 +593,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://dslwind.github.io/2019-05-19-frp/" title="使用frp实现内网穿透">https://dslwind.github.io/2019-05-19-frp/</a>
+      <a href="https://dslwind.github.io/2020-06-02-gujian-mod/" title="古剑MOD">https://dslwind.github.io/2020-06-02-gujian-mod/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -321,23 +602,20 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E6%8A%98%E8%85%BE/" rel="tag"><i class="fa fa-tag"></i> 折腾</a>
-              <a href="/tags/frp/" rel="tag"><i class="fa fa-tag"></i> frp</a>
-              <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="tag"><i class="fa fa-tag"></i> 内网穿透</a>
-              <a href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/" rel="tag"><i class="fa fa-tag"></i> 远程桌面</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag"><i class="fa fa-tag"></i> 游戏</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019-04-27-ebook/" rel="prev" title="电子书制作">
-                  <i class="fa fa-chevron-left"></i> 电子书制作
+                <a href="/2020-04-24-ji3/" rel="prev" title="极路由3搞机资源">
+                  <i class="fa fa-chevron-left"></i> 极路由3搞机资源
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019-06-04-MathjaxLearning/" rel="next" title="Markdown数学公式">
-                  Markdown数学公式 <i class="fa fa-chevron-right"></i>
+                <a href="/2020-06-22-wt/" rel="next" title="将 Windows Terminal 添加到右键菜单">
+                  将 Windows Terminal 添加到右键菜单 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
