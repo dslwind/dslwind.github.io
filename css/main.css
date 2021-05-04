@@ -3154,7 +3154,18 @@ mjx-container[display="true"] + br {
     padding: 10px 12px;
   }
 }
+/************************** Post ***************************/
+/* post-图片标题 */
+.post-body .image-caption {
+  margin: 0 auto 15px;
+}
+/* post-行内代码 */
 code {
+  font-size: 0.95em;
+  background: var(--highlight-background);
   color: #ff7600;
-  background: none;
+}
+/* post-思源宋体列表打叉修复 */
+li {
+  text-align: left;
 }
