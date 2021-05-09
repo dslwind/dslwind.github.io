@@ -3143,3 +3143,19 @@ li {
 .posts-expand .post-title {
   font-weight: bold;
 }
+/* post-引用与 note 字体 */
+blockquote p,
+.post-body .note {
+  font-family: "EB Garamond", STKaiti, KaiTi, SimKai, DFKai-SB, "Noto Serif SC";
+}
+blockquote {
+  border-left-width: 3px;
+}
+.site-title {
+  font-weight: bold;
+}
+/* post-段后距 */
+p {
+  margin-bottom: 0;
+}
+/* post-标题段前距 */
