@@ -20,29 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dslwind.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;dslwind&#x2F;CDN&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:true,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeIn&quot;,&quot;post_body&quot;:&quot;fadeIn&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeIn&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script>
-<meta name="description" content="由于众所周知的原因，PyPI 官网的访问速度可能不佳。">
+<meta name="description" content="渗透测试，从入门到入狱">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PyPI镜像设置">
-<meta property="og:url" content="https://dslwind.github.io/2018-04-01-pip/">
+<meta property="og:title" content="WiFi安全">
+<meta property="og:url" content="https://dslwind.github.io/2021-05-19-kali-wifi/">
 <meta property="og:site_name" content="水木风的个人博客">
-<meta property="og:description" content="由于众所周知的原因，PyPI 官网的访问速度可能不佳。">
+<meta property="og:description" content="渗透测试，从入门到入狱">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-04-01T04:04:26.000Z">
+<meta property="article:published_time" content="2021-05-19T05:39:30.000Z">
 <meta property="article:modified_time" content="2021-05-19T14:16:18.805Z">
 <meta property="article:author" content="dslwind">
-<meta property="article:tag" content="折腾">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dslwind.github.io/2018-04-01-pip/">
+<link rel="canonical" href="https://dslwind.github.io/2021-05-19-kali-wifi/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dslwind.github.io&#x2F;2018-04-01-pip&#x2F;&quot;,&quot;path&quot;:&quot;2018-04-01-pip&#x2F;&quot;,&quot;title&quot;:&quot;PyPI镜像设置&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dslwind.github.io&#x2F;2021-05-19-kali-wifi&#x2F;&quot;,&quot;path&quot;:&quot;2021-05-19-kali-wifi&#x2F;&quot;,&quot;title&quot;:&quot;WiFi安全&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>PyPI镜像设置 | 水木风的个人博客</title><script src="/js/config.js"></script>
+<title>WiFi安全 | 水木风的个人博客</title><script src="/js/config.js"></script>
   
 
 
@@ -119,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A7%E7%89%88%E6%9C%AC-pip%EF%BC%88-lt-10%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">旧版本 pip（&lt;10）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E7%89%88%E6%9C%AC-gt-10-0-0"><span class="nav-number">2.</span> <span class="nav-text">新版本 (&gt;&#x3D;10.0.0)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TUNA"><span class="nav-number">3.</span> <span class="nav-text">TUNA</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%8D%A1%E4%BF%A1%E6%81%AF"><span class="nav-number">1.</span> <span class="nav-text">查看网卡信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E5%8D%A1%E5%BC%80%E5%90%AF%E7%9B%91%E5%90%AC%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">网卡开启监听模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%9B%91%E5%90%AC%E6%A8%A1%E5%BC%8F%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF%E6%88%90%E5%8A%9F"><span class="nav-number">3.</span> <span class="nav-text">查看监听模式是否开启成功</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%AB%E6%8F%8F%E9%99%84%E8%BF%91%E7%83%AD%E7%82%B9%E4%BF%A1%E6%81%AF"><span class="nav-number">4.</span> <span class="nav-text">扫描附近热点信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%93%E5%8F%96%E6%8F%A1%E6%89%8B%E5%8C%85"><span class="nav-number">5.</span> <span class="nav-text">抓取握手包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-aireplay-ng-%E5%AF%B9%E7%9B%AE%E6%A0%87%E8%AE%BE%E5%A4%87%E5%8F%91%E8%B5%B7%E6%94%BB%E5%87%BB"><span class="nav-number">6.</span> <span class="nav-text">使用 aireplay-ng 对目标设备发起攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-aircrack-ng-%E8%BF%9B%E8%A1%8C%E7%A0%B4%E8%A7%A3"><span class="nav-number">7.</span> <span class="nav-text">使用 aircrack-ng 进行破解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%80%80%E5%87%BA%E7%9B%91%E5%90%AC%E6%A8%A1%E5%BC%8F"><span class="nav-number">8.</span> <span class="nav-text">无线网卡退出监听模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">9.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">10.</span> <span class="nav-text">参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -189,7 +188,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2018-04-01-pip/">
+    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2021-05-19-kali-wifi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://tvax2.sinaimg.cn/large/7fa1e0d7ly1ff52f888f4j20md0mbwh0.jpg">
@@ -202,7 +201,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          PyPI镜像设置
+          WiFi安全
         </h1>
 
         <div class="post-meta-container">
@@ -213,7 +212,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2018-04-01 12:04:26" itemprop="dateCreated datePublished" datetime="2018-04-01T12:04:26+08:00">2018-04-01</time>
+      <time title="创建时间：2021-05-19 13:39:30" itemprop="dateCreated datePublished" datetime="2021-05-19T13:39:30+08:00">2021-05-19</time>
     </span>
 
   
@@ -224,7 +223,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>987</span>
+      <span>872</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -242,47 +241,35 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>由于众所周知的原因，PyPI 官网的访问速度可能不佳。</p>
+        <p><del>渗透测试，从入门到入狱</del></p>
 <span id="more"></span>
 
-<h2 id="旧版本-pip（-lt-10）"><a href="#旧版本-pip（-lt-10）" class="headerlink" title="旧版本 pip（&lt;10）"></a>旧版本 pip（&lt;10）</h2><p>编辑 <code>pip</code> 配置文件，将 <code>index-url</code> 修改为（中科大源）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mirrors.ustc.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure>
+<h2 id="查看网卡信息"><a href="#查看网卡信息" class="headerlink" title="查看网卡信息"></a>查看网卡信息</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airmon-ng</span><br></pre></td></tr></table></figure>
 
-<p>或（清华源）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+<h2 id="网卡开启监听模式"><a href="#网卡开启监听模式" class="headerlink" title="网卡开启监听模式"></a>网卡开启监听模式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airmon-ng start &#123;网卡名称&#125;</span><br></pre></td></tr></table></figure>
 
-<p><code>pip</code> 的配置文件一般位于（如果没有，则直接创建）：</p>
-<ul>
-<li>（类）Unix 环境: <code>$HOME/.config/pip/pip.conf</code></li>
-<li>macOS: <code>$HOME/Library/Application Support/pip/pip.conf</code></li>
-<li>Windows: <code>%APPDATA%\pip\pip.ini</code></li>
-</ul>
-<p>全局或者 <code>virtualenv</code> 等的 <code>pip</code> 配置文件位置，请参考 <a target="_blank" rel="noopener" href="https://pip.pypa.io/en/stable/user_guide/#configuration">https://pip.pypa.io/en/stable/user_guide/#configuration</a></p>
-<p><code>pip.conf</code> 文件配置示例如下：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[global]</span></span><br><span class="line"><span class="attr">index-url</span> = https://mirrors.ustc.edu.cn/pypi/web/simple</span><br><span class="line"><span class="attr">format</span> = columns</span><br></pre></td></tr></table></figure>
+<p>例如可用的无线网卡名称为<code>wlan0</code>。</p>
+<h2 id="查看监听模式是否开启成功"><a href="#查看监听模式是否开启成功" class="headerlink" title="查看监听模式是否开启成功"></a>查看监听模式是否开启成功</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwconfig</span><br></pre></td></tr></table></figure>
 
-<h2 id="新版本-gt-10-0-0"><a href="#新版本-gt-10-0-0" class="headerlink" title="新版本 (&gt;=10.0.0)"></a>新版本 (&gt;=10.0.0)</h2><p>设置为清华源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+<p>网卡名称变成 <code>wlan0mon</code> 说明已经开启成功。</p>
+<h2 id="扫描附近热点信息"><a href="#扫描附近热点信息" class="headerlink" title="扫描附近热点信息"></a>扫描附近热点信息</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airodump-ng &#123;处于监听模式的网卡名称&#125;</span><br></pre></td></tr></table></figure>
 
-<p>或者中科大源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://mirrors.ustc.edu.cn/pypi/web/simple</span><br></pre></td></tr></table></figure>
+<h2 id="抓取握手包"><a href="#抓取握手包" class="headerlink" title="抓取握手包"></a>抓取握手包</h2><p>命令格式</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airodump-ng -c &#123;无线网络信道&#125; --bssid &#123;目标无线 AP 的硬件地址&#125; -w &#123;扫描结果保存的文件名&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="TUNA"><a href="#TUNA" class="headerlink" title="TUNA"></a>TUNA</h2><p>也可使用清华大学开源软件镜像站的<code>“一键使用TUNA”服务</code>，又名 <code>oh-my-tuna</code>。它目前支持更改下列软件的配置，将其直接指向 TUNA 镜像站：</p>
-<ul>
-<li>Anaconda</li>
-<li>Arch Linux</li>
-<li>TeX Live (by tlmgr)</li>
-<li>Debian GNU/Linux</li>
-<li>Homebrew</li>
-<li>PyPI</li>
-<li>Ubuntu Linux</li>
-</ul>
-<p>使用方法如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://tuna.moe/oh-my-tuna/oh-my-tuna.py</span><br><span class="line"><span class="comment"># For yourself</span></span><br><span class="line">python oh-my-tuna.py</span><br><span class="line"><span class="comment"># ...or for everyone!</span></span><br><span class="line">sudo python oh-my-tuna.py --global</span><br><span class="line"><span class="comment"># Get some help</span></span><br><span class="line">python oh-my-tuna.py -h</span><br></pre></td></tr></table></figure>
+<p>扫描过程中如果有用户设备尝试连接 Wi-Fi 时，我们就会拿到握手包。当抓到握手包时，上述命令输出的第一行会显示“handshake”字样。</p>
+<h2 id="使用-aireplay-ng-对目标设备发起攻击"><a href="#使用-aireplay-ng-对目标设备发起攻击" class="headerlink" title="使用 aireplay-ng 对目标设备发起攻击"></a>使用 aireplay-ng 对目标设备发起攻击</h2><p>可以看到使用上述命令抓不到握手包，原因是没有客户端与 AP 进行认证连接。但是对于已有客户端连接的热点，可以发送反认证包，让客户端下线，该客户端将重新尝试连接热点，这时候就可以抓到握手包了。</p>
+<p>发送反认证包的命令格式为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aireplay-ng -0 &#123;发送反认证包的个数&#125; -a &#123;无线 AP 硬件地址&#125; -c &#123;强制下线的MAC地址&#125; 无线网卡名称</span><br></pre></td></tr></table></figure>
 
-<p>参考：</p>
-<p><a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/help/pypi.html#pypi">PyPI 镜像源使用帮助</a></p>
-<p><a target="_blank" rel="noopener" href="https://tuna.moe/oh-my-tuna/">TUNA 主页</a></p>
+<h2 id="使用-aircrack-ng-进行破解"><a href="#使用-aircrack-ng-进行破解" class="headerlink" title="使用 aircrack-ng 进行破解"></a>使用 aircrack-ng 进行破解</h2><p>命令格式</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aircrack-ng -w &#123;本地字典文件&#125; &#123;握手包&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="无线网卡退出监听模式"><a href="#无线网卡退出监听模式" class="headerlink" title="无线网卡退出监听模式"></a>无线网卡退出监听模式</h2><p>命令格式</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">airmon-ng stop &#123;处于监听模式的无限网卡名称&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>字典文件是破解的关键，网上有很多字典。<br>并不是所有网卡都支持监听模式，例如 DW1510，虽然执行开启监听模式命令成功，查看网卡模式也有<code>enable</code>字样，但是网卡名称不会加<code>mon</code>，实测看不到连接到热点的客户端，更抓不到握手包。而 BCM4360 更是缺少了 Linux 下的驱动，直接废物。实测 Atheros AR928X 是可以开启监听模式并抓到握手包的。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zgang/p/11562012.html">kali 破解 wifi 密码</a><br><a target="_blank" rel="noopener" href="https://github.com/conwnet/wpa-dictionary">wpa-dictionary</a></p>
 
     </div>
 
@@ -300,7 +287,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://dslwind.github.io/2018-04-01-pip/" title="PyPI镜像设置">https://dslwind.github.io/2018-04-01-pip/</a>
+      <a href="https://dslwind.github.io/2021-05-19-kali-wifi/" title="WiFi安全">https://dslwind.github.io/2021-05-19-kali-wifi/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -309,19 +296,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E6%8A%98%E8%85%BE/" rel="tag"><i class="fa fa-tag"></i> 折腾</a>
-              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2021-05-09-software-tools/" rel="prev" title="一些好用的工具和软件">
+                  <i class="fa fa-chevron-left"></i> 一些好用的工具和软件
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2018-04-23-ubuntu-home-folder/" rel="next" title="Ubuntu个人文件夹中文改英文">
-                  Ubuntu个人文件夹中文改英文 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
