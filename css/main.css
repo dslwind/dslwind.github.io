@@ -412,9 +412,6 @@ hue-6-2: #c18401
 */
 
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
   color: #383a42;
   background: #fafafa;
 }
@@ -447,13 +444,8 @@ hue-6-2: #c18401
 .hljs-regexp,
 .hljs-addition,
 .hljs-attribute,
-.hljs-meta-string {
+.hljs-meta .hljs-string {
   color: #50a14f;
-}
-
-.hljs-built_in,
-.hljs-class .hljs-title {
-  color: #c18401;
 }
 
 .hljs-attr,
@@ -474,6 +466,12 @@ hue-6-2: #c18401
 .hljs-selector-id,
 .hljs-title {
   color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
 }
 
 .hljs-emphasis {
@@ -510,9 +508,6 @@ hue-6-2: #e6c07b
 */
 
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
   color: #abb2bf;
   background: #282c34;
 }
@@ -545,13 +540,8 @@ hue-6-2: #e6c07b
 .hljs-regexp,
 .hljs-addition,
 .hljs-attribute,
-.hljs-meta-string {
+.hljs-meta .hljs-string {
   color: #98c379;
-}
-
-.hljs-built_in,
-.hljs-class .hljs-title {
-  color: #e6c07b;
 }
 
 .hljs-attr,
@@ -572,6 +562,12 @@ hue-6-2: #e6c07b
 .hljs-selector-id,
 .hljs-title {
   color: #61aeee;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #e6c07b;
 }
 
 .hljs-emphasis {
@@ -3140,9 +3136,6 @@ li {
   text-align: left;
 }
 /* post-文章标题 */
-.posts-expand .post-title {
-  font-weight: bold;
-}
 /* post-引用与 note 字体 */
 blockquote p,
 .post-body .note {
@@ -3150,9 +3143,6 @@ blockquote p,
 }
 blockquote {
   border-left-width: 3px;
-}
-.site-title {
-  font-weight: bold;
 }
 /* post-段后距 */
 p {
