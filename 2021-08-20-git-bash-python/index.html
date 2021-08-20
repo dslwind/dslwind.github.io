@@ -226,7 +226,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>979</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -258,8 +258,40 @@
 <h3 id="中文编码"><a href="#中文编码" class="headerlink" title="中文编码"></a>中文编码</h3><p>首先是中文编码问题，得到的答案是改编码，相关代码如下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding=<span class="string">&#x27;utf8&#x27;</span>) <span class="comment">#改变标准输出的默认编码</span></span><br></pre></td></tr></table></figure>
 
-<p>以下是一些常用和中文的编码：<br>| 编码名称  | 用途     |<br>| ——— | ——– |<br>| utf8      | 所有语言 |<br>| gbk       | 简体中文 |<br>| gb2312    | 简体中文 |<br>| gb18030   | 简体中文 |<br>| big5      | 繁体中文 |<br>| big5hkscs | 繁体中文 |</p>
-<p>但是上述代码在IDLE里运行会报错，而encoding没选对，输出还是乱码。</p>
+<p>以下是一些常用和中文的编码：</p>
+<table>
+<thead>
+<tr>
+<th>编码名称</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>utf8</td>
+<td>所有语言</td>
+</tr>
+<tr>
+<td>gbk</td>
+<td>简体中文</td>
+</tr>
+<tr>
+<td>gb2312</td>
+<td>简体中文</td>
+</tr>
+<tr>
+<td>gb18030</td>
+<td>简体中文</td>
+</tr>
+<tr>
+<td>big5</td>
+<td>繁体中文</td>
+</tr>
+<tr>
+<td>big5hkscs</td>
+<td>繁体中文</td>
+</tr>
+</tbody></table>
+<p>但是上述代码在IDLE里运行会报错，而且如果encoding没选对，输出还是乱码。</p>
 <h3 id="实时显示"><a href="#实时显示" class="headerlink" title="实时显示"></a>实时显示</h3><p>在不安装IPython的情况下，直接在git bash里输入<code>python -i</code>是可以进入交互式界面的，但不建议用于运行脚本。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在stackoverflow搜索后发现，其实这是git bash所依赖的MSYS2的锅。临时的解决方法，是在命令行前加上<code>winpty</code>，即运行<code>winpty python</code>；永久的解决的方法有两个：一是修改bash的配置，二是修改Git for Windows的安装选项。理论上，这里的方法也能用于node。</p>
 <h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>在git bash里运行以下命令</p>
