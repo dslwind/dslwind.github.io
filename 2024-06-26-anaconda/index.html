@@ -20,28 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dslwind.github.io","root":"/","images":"https://cdn.jsdelivr.net/gh/dslwind/CDN/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeInLeft","sidebar":"fadeIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, local_var_name.">
+    <meta name="description" content="Anaconda折腾相关">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python 命名规范">
-<meta property="og:url" content="https://dslwind.github.io/2021-06-01-python-naming/">
+<meta property="og:title" content="Anaconda相关">
+<meta property="og:url" content="https://dslwind.github.io/2024-06-26-anaconda/">
 <meta property="og:site_name" content="水木风的个人博客">
-<meta property="og:description" content="module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, local_var_name.">
+<meta property="og:description" content="Anaconda折腾相关">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-01T05:12:43.000Z">
-<meta property="article:modified_time" content="2021-06-29T06:05:00.000Z">
+<meta property="article:published_time" content="2024-06-15T18:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-27T04:51:38.810Z">
 <meta property="article:author" content="dslwind">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="coding">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dslwind.github.io/2021-06-01-python-naming/">
+<link rel="canonical" href="https://dslwind.github.io/2024-06-26-anaconda/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dslwind.github.io/2021-06-01-python-naming/","path":"2021-06-01-python-naming/","title":"Python 命名规范"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dslwind.github.io/2024-06-26-anaconda/","path":"2024-06-26-anaconda/","title":"Anaconda相关"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Python 命名规范 | 水木风的个人博客</title>
+<title>Anaconda相关 | 水木风的个人博客</title>
   
 
 
@@ -113,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">总则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-%E4%B9%8B%E7%88%B6%E6%8E%A8%E8%8D%90%E7%9A%84%E8%A7%84%E8%8C%83"><span class="nav-number">2.</span> <span class="nav-text">Python 之父推荐的规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-%E6%8E%A8%E8%8D%90%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%8B%B1%E6%96%87%E5%8E%9F%E6%96%87"><span class="nav-number">3.</span> <span class="nav-text">Google 推荐风格的英文原文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Names-to-Avoid"><span class="nav-number">3.1.</span> <span class="nav-text">Names to Avoid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Naming-Conventions"><span class="nav-number">3.2.</span> <span class="nav-text">Naming Conventions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File-Naming"><span class="nav-number">3.3.</span> <span class="nav-text">File Naming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mathematical-Notation"><span class="nav-number">3.4.</span> <span class="nav-text">Mathematical Notation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%95%9C%E5%83%8F"><span class="nav-number">2.</span> <span class="nav-text">镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-Terminal"><span class="nav-number">3.</span> <span class="nav-text">Windows Terminal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9conda%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E8%B7%AF%E5%BE%84"><span class="nav-number">4.</span> <span class="nav-text">修改conda虚拟环境路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,7 +166,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2021-06-01-python-naming/">
+    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2024-06-26-anaconda/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/dslwind/CDN/images/avatar.jpg">
@@ -179,12 +179,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Python 命名规范 | 水木风的个人博客">
+      <meta itemprop="name" content="Anaconda相关 | 水木风的个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python 命名规范
+          Anaconda相关
         </h1>
 
         <div class="post-meta-container">
@@ -195,14 +195,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-06-01 13:12:43" itemprop="dateCreated datePublished" datetime="2021-06-01T13:12:43+08:00">2021-06-01</time>
+      <time title="创建时间：2024-06-16 02:00:00" itemprop="dateCreated datePublished" datetime="2024-06-16T02:00:00+08:00">2024-06-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-06-29 14:05:00" itemprop="dateModified" datetime="2021-06-29T14:05:00+08:00">2021-06-29</time>
+      <time title="修改时间：2024-06-27 12:51:38" itemprop="dateModified" datetime="2024-06-27T12:51:38+08:00">2024-06-27</time>
     </span>
 
   
@@ -212,14 +212,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.4k</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -229,207 +229,25 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><code>module_name</code>, <code>package_name</code>, <code>ClassName</code>, <code>method_name</code>, <code>ExceptionName</code>, <code>function_name</code>, <code>GLOBAL_CONSTANT_NAME</code>, <code>global_var_name</code>, <code>instance_var_name</code>, <code>function_parameter_name</code>, <code>local_var_name</code>.</p>
+    <div class="post-body" itemprop="articleBody"><p>Anaconda折腾相关</p>
 <span id="more"></span>
 
-<h2 id="总则"><a href="#总则" class="headerlink" title="总则"></a>总则</h2><p>函数名、变量名和文件名应该是描述性的，并避免缩写。尤其注意不要使用有歧义或不常见的缩写，也不要通过删除单词内的字母来缩写。使用<code>.py</code>扩展名，切忌使用连字符(<code>-</code>)。</p>
-<h2 id="Python-之父推荐的规范"><a href="#Python-之父推荐的规范" class="headerlink" title="Python 之父推荐的规范"></a>Python 之父推荐的规范</h2><table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Public</th>
-<th>Internal</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Packages</td>
-<td><code>lower_with_under</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Modules</td>
-<td><code>lower_with_under</code></td>
-<td><code>_lower_with_under</code></td>
-</tr>
-<tr>
-<td>Classes</td>
-<td><code>CapWords</code></td>
-<td><code>_CapWords</code></td>
-</tr>
-<tr>
-<td>Exceptions</td>
-<td><code>CapWords</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Functions</td>
-<td><code>lower_with_under()</code></td>
-<td><code>_lower_with_under()</code></td>
-</tr>
-<tr>
-<td>Global/Class Constants</td>
-<td><code>CAPS_WITH_UNDER</code></td>
-<td><code>_CAPS_WITH_UNDER</code></td>
-</tr>
-<tr>
-<td>Global/Class Variables</td>
-<td><code>lower_with_under</code></td>
-<td><code>_lower_with_under</code></td>
-</tr>
-<tr>
-<td>Instance Variables</td>
-<td><code>lower_with_under</code></td>
-<td><code>_lower_with_under</code> (protected)</td>
-</tr>
-<tr>
-<td>Method Names</td>
-<td><code>lower_with_under()</code></td>
-<td><code>_lower_with_under()</code> (protected)</td>
-</tr>
-<tr>
-<td>Function/Method Parameters</td>
-<td><code>lower_with_under</code></td>
-<td></td>
-</tr>
-<tr>
-<td>Local Variables</td>
-<td><code>lower_with_under</code></td>
-<td></td>
-</tr>
-</tbody></table>
-<!--
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/">清华镜像</a></p>
+<h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><p>Windows用户先运行<code>conda config --set show_channel_urls yes</code>生成<code>.condarc</code>文件，然后编辑：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">channels:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">defaults</span></span><br><span class="line"><span class="attr">show_channel_urls:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">default_channels:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span></span><br><span class="line"><span class="attr">custom_channels:</span></span><br><span class="line">  <span class="attr">conda-forge:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">msys2:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">bioconda:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">menpo:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">pytorch:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">pytorch-lts:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">simpleitk:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">deepmodeling:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/</span></span><br></pre></td></tr></table></figure>
 
-<table rules="all" border="1" summary="Guidelines from Guido's Recommendations"
-       cellspacing="2" cellpadding="2">
-
-  <tr>
-    <th>Type</th>
-    <th>Public</th>
-    <th>Internal</th>
-  </tr>
-
-  <tr>
-    <td>Packages</td>
-    <td><code>lower_with_under</code></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>Modules</td>
-    <td><code>lower_with_under</code></td>
-    <td><code>_lower_with_under</code></td>
-  </tr>
-
-  <tr>
-    <td>Classes</td>
-    <td><code>CapWords</code></td>
-    <td><code>_CapWords</code></td>
-  </tr>
-
-  <tr>
-    <td>Exceptions</td>
-    <td><code>CapWords</code></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>Functions</td>
-    <td><code>lower_with_under()</code></td>
-    <td><code>_lower_with_under()</code></td>
-  </tr>
-
-  <tr>
-    <td>Global/Class Constants</td>
-    <td><code>CAPS_WITH_UNDER</code></td>
-    <td><code>_CAPS_WITH_UNDER</code></td>
-  </tr>
-
-  <tr>
-    <td>Global/Class Variables</td>
-    <td><code>lower_with_under</code></td>
-    <td><code>_lower_with_under</code></td>
-  </tr>
-
-  <tr>
-    <td>Instance Variables</td>
-    <td><code>lower_with_under</code></td>
-    <td><code>_lower_with_under</code> (protected)</td>
-  </tr>
-
-  <tr>
-    <td>Method Names</td>
-    <td><code>lower_with_under()</code></td>
-    <td><code>_lower_with_under()</code> (protected)</td>
-  </tr>
-
-  <tr>
-    <td>Function/Method Parameters</td>
-    <td><code>lower_with_under</code></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td>Local Variables</td>
-    <td><code>lower_with_under</code></td>
-    <td></td>
-  </tr>
-
-</table>
-
-## 应避免使用的名称
-
-- 单个字符名称，除以下特例:
-
-  - 计数器或迭代器，如`i`, `j`, `k`, `v`等；
-  - `try/except` 语句的异常`e`；
-  - `with`语句中的文件`f`
-    注意不要滥用单字符变量名。例如，对于 5 行的代码块，`i`是一个不错的变量名，但在多重嵌套内，`i`的含义显得含糊。
-
-- 包/模块名的连字符(-)
-
-- 以双下划线开头并结尾的名称（Python 保留用法，例如：`__init__`）
-
-- offensive terms
-
-- 不必要地包含变量类型的名称（例如：`id_to_name_dict`）
-
--->
-
-<h2 id="Google-推荐风格的英文原文"><a href="#Google-推荐风格的英文原文" class="headerlink" title="Google 推荐风格的英文原文"></a>Google 推荐风格的英文原文</h2><p>Function names, variable names, and filenames should be descriptive; eschew abbreviation. In particular, do not use abbreviations that are ambiguous or unfamiliar to readers outside your project, and do not abbreviate by deleting letters within a word.</p>
-<p>Always use a <code>.py</code> filename extension. Never use dashes.</p>
-<h3 id="Names-to-Avoid"><a href="#Names-to-Avoid" class="headerlink" title="Names to Avoid"></a>Names to Avoid</h3><ul>
-<li><p>single character names, except for specifically allowed cases:</p>
-<ul>
-<li>counters or iterators (e.g. <code>i</code>, <code>j</code>, <code>k</code>, <code>v</code>, et al.)</li>
-<li><code>e</code> as an exception identifier in <code>try/except</code> statements.</li>
-<li><code>f</code> as a file handle in <code>with</code> statements</li>
-</ul>
-<p>Please be mindful not to abuse single-character naming. Generally speaking, descriptiveness should be proportional to the name’s scope of visibility. For example, <code>i</code> might be a fine name for 5-line code block but within multiple nested scopes, it is likely too vague.</p>
+<h2 id="Windows-Terminal"><a href="#Windows-Terminal" class="headerlink" title="Windows Terminal"></a>Windows Terminal</h2><ol>
+<li><p>在开始菜单中找到conda的快捷方式，打开文件位置，属性，切换到快捷方式选项卡，复制目标里的命令。</p>
 </li>
-<li><p>dashes (<code>-</code>) in any package/module name</p>
+<li><p>在Windows Terminal中添加新配置文件，新建一个空配置文件，名称填conda，命令行填上一步复制的命令，图标在conda安装目录的Menu文件夹中。</p>
 </li>
-<li><p><code>__double_leading_and_trailing_underscore__</code> names (reserved by Python)</p>
-</li>
-<li><p>offensive terms</p>
-</li>
-<li><p>names that needlessly include the type of the variable (for example: <code>id_to_name_dict</code>)</p>
-</li>
-</ul>
-<h3 id="Naming-Conventions"><a href="#Naming-Conventions" class="headerlink" title="Naming Conventions"></a>Naming Conventions</h3><ul>
-<li><p>“Internal” means internal to a module, or protected or private within a class.</p>
-</li>
-<li><p>Prepending a single underscore (<code>_</code>) has some support for protecting module variables and functions (linters will flag protected member access). While prepending a double underscore (<code>__</code> aka “dunder”) to an instance variable or method effectively makes the variable or method private to its class (using name mangling); we discourage its use as it impacts readability and testability, and isn’t <em>really</em> private.</p>
-</li>
-<li><p>Place related classes and top-level functions together in a module. Unlike Java, there is no need to limit yourself to one class per module.</p>
-</li>
-<li><p>Use CapWords for class names, but lower_with_under.py for module names. Although there are some old modules named CapWords.py, this is now discouraged because it’s confusing when the module happens to be named after a class. (“wait – did I write <code>import StringIO</code> or <code>from StringIO import StringIO</code>?”)</p>
-</li>
-<li><p>Underscores may appear in <em>unittest</em> method names starting with <code>test</code> to separate logical components of the name, even if those components use CapWords. One possible pattern is <code>test&lt;MethodUnderTest&gt;_&lt;state&gt;</code>; for example <code>testPop_EmptyStack</code> is okay. There is no One Correct Way to name test methods.</p>
-</li>
-</ul>
-<h3 id="File-Naming"><a href="#File-Naming" class="headerlink" title="File Naming"></a>File Naming</h3><p>Python filenames must have a <code>.py</code> extension and must not contain dashes (<code>-</code>). This allows them to be imported and unittested. If you want an executable to be accessible without the extension, use a symbolic link or a simple bash wrapper containing exec <code>&quot;$0.py&quot; &quot;$@&quot;</code>.</p>
-<h3 id="Mathematical-Notation"><a href="#Mathematical-Notation" class="headerlink" title="Mathematical Notation"></a>Mathematical Notation</h3><p>For mathematically heavy code, short variable names that would otherwise violate the style guide are preferred when they match established notation in a reference paper or algorithm. When doing so, reference the source of all naming conventions in a comment or docstring or, if the source is not accessible, clearly document the naming conventions. Prefer PEP8-compliant <code>descriptive_names</code> for public APIs, which are much more likely to be encountered out of context.</p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://google.github.io/styleguide/pyguide.html#316-naming">Google Python Style Guide</a><br><a target="_blank" rel="noopener" href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md#s3.16-naming">styleguide/pyguide.md</a></p>
+</ol>
+<h2 id="修改conda虚拟环境路径"><a href="#修改conda虚拟环境路径" class="headerlink" title="修改conda虚拟环境路径"></a>修改conda虚拟环境路径</h2><p>使用<code>conda info</code>查看conda配置信息，其中<code>envs directories</code>为虚拟环境的安装目录，<code>package cache</code>为安装包缓存路径，可以通过修改<code>.condarc</code>来更改这两个目录。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">envs_dirs:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">D:\conda\envs</span></span><br><span class="line"><span class="attr">pkgs_dirs:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">D:\conda\pkgs</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">Anaconda 镜像使用帮助</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.51tools.info/article/EzqMJ.html">Windows Terminal 调用Anaconda/Miniconda的方法</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tian777/p/17481056.html">修改conda虚拟环境路径</a></p>
 
     </div>
 
@@ -447,7 +265,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://dslwind.github.io/2021-06-01-python-naming/" title="Python 命名规范">https://dslwind.github.io/2021-06-01-python-naming/</a>
+      <a href="https://dslwind.github.io/2024-06-26-anaconda/" title="Anaconda相关">https://dslwind.github.io/2024-06-26-anaconda/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -456,21 +274,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/coding/" rel="tag"><i class="fa fa-tag"></i> coding</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021-05-19-kali-wifi/" rel="prev" title="WiFi安全">
-                  <i class="fa fa-angle-left"></i> WiFi安全
+                <a href="/2023-07-18-gujian-hidpi/" rel="prev" title="高分屏打开《古剑奇谭》的正确方式">
+                  <i class="fa fa-angle-left"></i> 高分屏打开《古剑奇谭》的正确方式
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021-06-07-b43xx/" rel="next" title="bcm43xx无线网卡驱动">
-                  bcm43xx无线网卡驱动 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
