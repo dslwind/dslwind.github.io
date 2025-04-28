@@ -23,7 +23,7 @@
     <meta name="description" content="一些小寄巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自制多看电子书">
-<meta property="og:url" content="https://dslwind.github.io/2025-04-16-%E8%87%AA%E5%88%B6%E5%A4%9A%E7%9C%8B%E7%94%B5%E5%AD%90%E4%B9%A6/">
+<meta property="og:url" content="https://dslwind.github.io/2025-04-16-duokan_epub/">
 <meta property="og:site_name" content="水木风的个人博客">
 <meta property="og:description" content="一些小寄巧">
 <meta property="og:locale" content="zh_CN">
@@ -37,10 +37,10 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dslwind.github.io/2025-04-16-%E8%87%AA%E5%88%B6%E5%A4%9A%E7%9C%8B%E7%94%B5%E5%AD%90%E4%B9%A6/">
+<link rel="canonical" href="https://dslwind.github.io/2025-04-16-duokan_epub/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dslwind.github.io/2025-04-16-%E8%87%AA%E5%88%B6%E5%A4%9A%E7%9C%8B%E7%94%B5%E5%AD%90%E4%B9%A6/","path":"2025-04-16-自制多看电子书/","title":"自制多看电子书"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dslwind.github.io/2025-04-16-duokan_epub/","path":"2025-04-16-duokan_epub/","title":"自制多看电子书"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>自制多看电子书 | 水木风的个人博客</title>
@@ -195,7 +195,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2025-04-16-%E8%87%AA%E5%88%B6%E5%A4%9A%E7%9C%8B%E7%94%B5%E5%AD%90%E4%B9%A6/">
+    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2025-04-16-duokan_epub/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/dslwind/CDN/images/avatar.jpg">
@@ -265,10 +265,10 @@
 <h2 id="图片处理"><a href="#图片处理" class="headerlink" title="图片处理"></a>图片处理</h2><h3 id="封面全屏"><a href="#封面全屏" class="headerlink" title="封面全屏"></a>封面全屏</h3><p>在元数据的 <code>spine</code> 部分中，给封面页<code>itemref</code>标签添加 <code>properties=&quot;duokan-page-fullscreen&quot;</code>属性，例如：</p>
 <p><code>&lt;itemref idref=&quot;cover&quot; properties=&quot;duokan-page-fullscreen&quot;/&gt;</code></p>
 <h3 id="交互图"><a href="#交互图" class="headerlink" title="交互图"></a>交互图</h3><p>交互图主要实现用户点击图像后，图像自动全屏显示，在全屏显示时图像可以两指放大和旋转。</p>
-<p>实现方法只需要加上 duokan-image-single 这个类即可。当然在 CSS 里也可以针对此类自定义样式。</p>
+<p>实现方法只需要加上 <code>duokan-image-single</code> 这个类即可。当然在 CSS 里也可以针对此类自定义样式。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-single&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;../Images/pic.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-maintitle&quot;</span>&gt;</span>主标题<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-subtitle&quot;</span>&gt;</span>副标题<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="画廊"><a href="#画廊" class="headerlink" title="画廊"></a>画廊</h3><p>画廊主要实现在同一位置显示多张图片，通过滑动可以切换图片，节省了 epub 的排版空间。另外画廊模式的每张图片也可以交互。</p>
+<h3 id="画廊"><a href="#画廊" class="headerlink" title="画廊"></a>画廊</h3><p>画廊主要实现在同一位置显示多张图片，通过滑动可以切换图片，节省了 EPUB 的排版空间。另外画廊模式的每张图片也可以交互。</p>
 <p>实现方法如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-gallery&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-gallery-cell&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;images/pic1.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-maintitle&quot;</span>&gt;</span>主标题1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-subtitle&quot;</span>&gt;</span>副标题1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-gallery-cell&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span> =<span class="string">&quot;images/pic2.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-maintitle&quot;</span>&gt;</span>主标题2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-subtitle&quot;</span>&gt;</span>副标题2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-gallery-cell&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span> =<span class="string">&quot;images/pic3.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-maintitle&quot;</span>&gt;</span>主标题3<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;duokan-image-subtitle&quot;</span>&gt;</span>副标题3<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -294,7 +294,7 @@
 <p>在CSS中添加字体的定义，例如：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&quot;Garamond&quot;</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: normal;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&quot;../Fonts/Garamond.ttf&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="字体子集化"><a href="#字体子集化" class="headerlink" title="字体子集化"></a>字体子集化</h3><p><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/7858874352">插件地址</a></p>
+<h3 id="字体子集化"><a href="#字体子集化" class="headerlink" title="字体子集化"></a>字体子集化</h3><p><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/7858874352">插件发布地址</a></p>
 <p><a target="_blank" rel="noopener" href="https://wwb.lanzoub.com/b01hjaibc?pwd=c560#c560">插件下载地址</a></p>
 
     </div>
@@ -313,7 +313,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://dslwind.github.io/2025-04-16-%E8%87%AA%E5%88%B6%E5%A4%9A%E7%9C%8B%E7%94%B5%E5%AD%90%E4%B9%A6/" title="自制多看电子书">https://dslwind.github.io/2025-04-16-自制多看电子书/</a>
+      <a href="https://dslwind.github.io/2025-04-16-duokan_epub/" title="自制多看电子书">https://dslwind.github.io/2025-04-16-duokan_epub/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
