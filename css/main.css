@@ -607,6 +607,14 @@ hue-6-2: #e6c07b
 .code-container {
   position: relative;
 }
+.code-lang {
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.1;
+  pointer-events: none;
+  position: absolute;
+  right: 5px;
+}
 .copy-btn {
   color: #333;
   cursor: pointer;
@@ -1412,7 +1420,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #73ebff;
+    background: #8cff32;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
