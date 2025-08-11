@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="//cdn.jsdelivr.net/gh/dslwind/CDN/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="//cdn.jsdelivr.net/gh/dslwind/CDN/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="//cdn.jsdelivr.net/gh/dslwind/CDN/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="//cdn.jsdelivr.net/gh/dslwind/CDN/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Courier+Prime:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0.17/dist/fancybox/fancybox.css" integrity="sha256-yE0aDX61mjiw8FoDuGetFttFoGJMeWsU/iYEFOfpMhA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dslwind.github.io","root":"/","images":"https://cdn.jsdelivr.net/gh/dslwind/CDN/images","scheme":"Gemini","darkmode":true,"version":"8.24.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeInLeft","sidebar":"fadeIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="title: Windows 环境下 VSCode 集成 Git Bash 与 Condadate: 2025-08-11T09:00:00+08:00updated: 2025-08-11T11:00:00+08:00tags: [M$, 折腾, Windows, VSCode, Conda, Git Bash] Windows 环境下 VSCode 集成 Git Bash 与 Condacon">
+<meta property="og:type" content="article">
+<meta property="og:title" content="水木风的个人博客">
+<meta property="og:url" content="https://dslwind.github.io/2025-08-11-Git_Bash-Conda/">
+<meta property="og:site_name" content="水木风的个人博客">
+<meta property="og:description" content="title: Windows 环境下 VSCode 集成 Git Bash 与 Condadate: 2025-08-11T09:00:00+08:00updated: 2025-08-11T11:00:00+08:00tags: [M$, 折腾, Windows, VSCode, Conda, Git Bash] Windows 环境下 VSCode 集成 Git Bash 与 Condacon">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-11T08:33:24.340Z">
+<meta property="article:modified_time" content="2025-08-11T08:33:24.340Z">
+<meta property="article:author" content="dslwind">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dslwind.github.io/2025-08-11-Git_Bash-Conda/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dslwind.github.io/2025-08-11-Git_Bash-Conda/","path":"2025-08-11-Git_Bash-Conda/","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title> | 水木风的个人博客</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0.17/dist/fancybox/fancybox.umd.js" integrity="sha256-32A/chfN6JgQkwK/QFZY8siVcOZj3LUt1vSKIcDvshM=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/pjax.js" defer></script>
+
+  
+
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">水木风的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">33</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">38</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-%E7%8E%AF%E5%A2%83%E4%B8%8B-VSCode-%E9%9B%86%E6%88%90-Git-Bash-%E4%B8%8E-Conda"><span class="nav-number">1.</span> <span class="nav-text">Windows 环境下 VSCode 集成 Git Bash 与 Conda</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%BC%95%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">1. 引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%9B%AE%E6%A0%87"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E8%83%8C%E6%99%AF"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E9%80%82%E7%94%A8%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3 适用对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%B3%BB%E7%BB%9F%E5%BF%85%E5%A4%87"><span class="nav-number">1.2.</span> <span class="nav-text">2. 系统必备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B"><span class="nav-number">1.3.</span> <span class="nav-text">3. 配置流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%EF%BC%9A%E5%AE%9A%E4%BD%8D-Conda-%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%9C%AC"><span class="nav-number">1.3.1.</span> <span class="nav-text">步骤一：定位 Conda 初始化脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C%EF%BC%9A%E9%85%8D%E7%BD%AE-Git-Bash-%E5%90%AF%E5%8A%A8%E6%96%87%E4%BB%B6-bashrc"><span class="nav-number">1.3.2.</span> <span class="nav-text">步骤二：配置 Git Bash 启动文件 (.bashrc)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%89%EF%BC%9A%E8%AE%BE%E5%AE%9A-VSCode-%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF"><span class="nav-number">1.3.3.</span> <span class="nav-text">步骤三：设定 VSCode 默认终端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E5%9B%9B%EF%BC%9A%E9%AA%8C%E8%AF%81%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.4.</span> <span class="nav-text">步骤四：验证配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-Troubleshooting"><span class="nav-number">1.4.</span> <span class="nav-text">4. 常见问题与解决方案 (Troubleshooting)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%BB%93%E8%AE%BA"><span class="nav-number">1.5.</span> <span class="nav-text">5. 结论</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="dslwind"
+      src="https://cdn.jsdelivr.net/gh/dslwind/CDN/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">dslwind</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dslwind" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dslwind" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2025-08-11-Git_Bash-Conda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/dslwind/CDN/images/avatar.jpg">
+      <meta itemprop="name" content="dslwind">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="水木风的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 水木风的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-08-11 16:33:24" itemprop="dateCreated datePublished" datetime="2025-08-11T16:33:24+08:00">2025-08-11</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>title: Windows 环境下 VSCode 集成 Git Bash 与 Conda<br>date: 2025-08-11T09:00:00+08:00<br>updated: 2025-08-11T11:00:00+08:00<br>tags: [M$, 折腾, Windows, VSCode, Conda, Git Bash]</p>
+<h1 id="Windows-环境下-VSCode-集成-Git-Bash-与-Conda"><a href="#Windows-环境下-VSCode-集成-Git-Bash-与-Conda" class="headerlink" title="Windows 环境下 VSCode 集成 Git Bash 与 Conda"></a>Windows 环境下 VSCode 集成 Git Bash 与 Conda</h1><p><del><code>conda activate fxxkm$</code></del></p>
+<span id="more"></span>
+
+<h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1. 引言"></a>1. 引言</h2><h3 id="1-1-目标"><a href="#1-1-目标" class="headerlink" title="1.1 目标"></a>1.1 目标</h3><p>本文旨在为 Windows 平台上的开发者提供一个清晰、可靠的配置方案，以实现 Visual Studio Code (VSCode) 与 Git Bash 及 Conda 的无缝集成。最终目标是在不将 Conda 添加到系统环境变量（PATH）的前提下，能够在 VSCode 的集成终端（Git Bash）中流畅地使用 Git 和 Conda 命令。</p>
+<h3 id="1-2-背景"><a href="#1-2-背景" class="headerlink" title="1.2 背景"></a>1.2 背景</h3><p>Conda 官方推荐在安装过程中不勾选“Add Anaconda to my PATH environment variable”选项。此举是为了避免 Conda 环境中的 Python 及其他库与系统内已安装的其他软件产生潜在的版本冲突，是保障系统环境纯净性和稳定性的最佳实践。然而，这也导致在标准终端中无法直接调用<code>conda</code>命令。</p>
+<h3 id="1-3-适用对象"><a href="#1-3-适用对象" class="headerlink" title="1.3 适用对象"></a>1.3 适用对象</h3><ul>
+<li>在 Windows 操作系统上进行开发的编程人员。</li>
+<li>使用 VSCode 作为主要代码编辑器。</li>
+<li>已安装 Git for Windows 并希望使用 Git Bash 作为主力终端。</li>
+<li>已安装 Anaconda 或 Miniconda 并希望在终端中进行环境管理。</li>
+</ul>
+<h2 id="2-系统必备"><a href="#2-系统必备" class="headerlink" title="2. 系统必备"></a>2. 系统必备</h2><p>在开始配置前，请确保您的系统中已安装以下软件：</p>
+<ul>
+<li><strong>Visual Studio Code</strong>: <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">官方下载地址</a></li>
+<li><strong>Git for Windows</strong>: <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">官方下载地址</a></li>
+<li><strong>Anaconda 或 Miniconda</strong>: <a target="_blank" rel="noopener" href="https://www.anaconda.com/products/distribution">官方下载地址</a> <a target="_blank" rel="noopener" href="https://mirrors.cernet.edu.cn/app/Conda">国内镜像</a></li>
+</ul>
+<h2 id="3-配置流程"><a href="#3-配置流程" class="headerlink" title="3. 配置流程"></a>3. 配置流程</h2><p>配置的核心思想是，让 Git Bash 在每次启动时，自动加载 Conda 的初始化脚本，从而使<code>conda</code>命令在当前终端会话中可用。</p>
+<h3 id="步骤一：定位-Conda-初始化脚本"><a href="#步骤一：定位-Conda-初始化脚本" class="headerlink" title="步骤一：定位 Conda 初始化脚本"></a>步骤一：定位 Conda 初始化脚本</h3><p>首先，需要找到 Conda 为 Bash 环境准备的初始化脚本<code>conda.sh</code>。其路径通常位于 Conda 安装目录下的<code>etc\profile.d\</code>文件夹内。</p>
+<ol>
+<li><p> 打开文件资源管理器。</p>
+</li>
+<li><p>导航至您的 Conda 安装路径。</p>
+<ul>
+<li><strong>Anaconda3 默认路径</strong>: <code>C:\Users\&lt;你的用户名&gt;\anaconda3</code></li>
+<li><strong>Miniconda3 默认路径</strong>: <code>C:\Users\&lt;你的用户名&gt;\miniconda3</code></li>
+</ul>
+</li>
+<li><p><code>conda.sh</code>脚本的完整 Windows 路径应为：<br> <code>C:\Users\&lt;你的用户名&gt;\anaconda3\etc\profile.d\conda.sh</code></p>
+</li>
+<li><p>在 Git Bash 中，此路径需要转换为 Unix 风格的格式。转换规则如下：</p>
+<ul>
+<li>盘符 <code>C:\</code> 变为 <code>/c/</code>。</li>
+<li>反斜杠 <code>\</code> 变为正斜杠 <code>/</code>。</li>
+</ul>
+<p> 因此，上述路径在 Git Bash 中应表示为：<br> <code>/c/Users/&lt;你的用户名&gt;/anaconda3/etc/profile.d/conda.sh</code></p>
+</li>
+</ol>
+<h3 id="步骤二：配置-Git-Bash-启动文件-bashrc"><a href="#步骤二：配置-Git-Bash-启动文件-bashrc" class="headerlink" title="步骤二：配置 Git Bash 启动文件 (.bashrc)"></a>步骤二：配置 Git Bash 启动文件 (<code>.bashrc</code>)</h3><p><code>.bashrc</code>是 Bash Shell 的个人初始化文件，每次启动交互式 Bash 会话时，其中的命令都会被执行。</p>
+<ol>
+<li><p> 在 VSCode 中，打开一个新的终端。如果默认不是 Git Bash，请通过终端面板的下拉箭头选择它。</p>
+</li>
+<li><p>在 Git Bash 终端中，执行以下命令以使用 VSCode 打开（或创建）<code>.bashrc</code>文件：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>~</code>符号代表您的用户主目录，即<code>C:\Users\&lt;你的用户名&gt;</code>。</p>
+</blockquote>
+</li>
+<li><p>在打开的<code>.bashrc</code>文件中，于文件末尾添加以下<code>source</code>命令。<strong>请务必将路径替换为您在步骤一中确认的实际路径</strong>。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Conda Initialization</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 注意：请将下方的路径替换为您系统中 conda.sh 文件的实际路径。</span></span><br><span class="line"><span class="comment"># 建议使用单引号将路径括起来，以避免路径中的特殊字符导致解析错误。</span></span><br><span class="line"><span class="built_in">source</span> <span class="string">&#x27;/c/Users/&lt;你的用户名&gt;/anaconda3/etc/profile.d/conda.sh&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li><p> 保存并关闭<code>.bashrc</code>文件。</p>
+</li>
+</ol>
+<h3 id="步骤三：设定-VSCode-默认终端"><a href="#步骤三：设定-VSCode-默认终端" class="headerlink" title="步骤三：设定 VSCode 默认终端"></a>步骤三：设定 VSCode 默认终端</h3><p>为确保每次打开 VSCode 终端时都默认启动已配置好的 Git Bash，请进行如下设置：</p>
+<ol>
+<li> 在 VSCode 中，按下<code>Ctrl + Shift + P</code>打开命令面板。</li>
+<li> 输入并选择<code>Terminal: Select Default Profile</code> (终端: 选择默认配置文件)。</li>
+<li> 在列表中选择<strong>Git Bash</strong>。</li>
+</ol>
+<p>或者，通过修改<code>settings.json</code>文件进行精确配置：</p>
+<ol>
+<li> 按下<code>Ctrl + ,</code>打开设置界面，点击右上角的“打开设置(JSON)”图标。</li>
+<li>在<code>settings.json</code>中添加或修改以下条目： <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;terminal.integrated.defaultProfile.windows&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Git Bash&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="步骤四：验证配置"><a href="#步骤四：验证配置" class="headerlink" title="步骤四：验证配置"></a>步骤四：验证配置</h3><p>配置完成后，必须重启 VSCode 以使所有设置生效。</p>
+<ol>
+<li> <strong>完全关闭</strong>所有 VSCode 窗口。</li>
+<li> 重新启动 VSCode。</li>
+<li> 按下<code>Ctrl + `` </code>快捷键打开一个新的集成终端。</li>
+</ol>
+<p><strong>预期结果</strong>：<br>您应当能看到终端提示符的左侧出现了<code>(base)</code>字样，这表示 Conda 已成功初始化并自动激活了其基础环境。</p>
+<p><strong>验证命令</strong>：<br>在新的终端中执行以下命令以确认功能完备性：</p>
+<ul>
+<li><strong>检查 Conda 版本</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure></li>
+<li><strong>列出所有 Conda 环境</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="built_in">env</span> list</span><br></pre></td></tr></table></figure></li>
+<li><strong>激活并切换环境</strong>（假设存在名为<code>my-project</code>的环境）：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate my-project</span><br></pre></td></tr></table></figure></li>
+<li><strong>停用当前环境</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="4-常见问题与解决方案-Troubleshooting"><a href="#4-常见问题与解决方案-Troubleshooting" class="headerlink" title="4. 常见问题与解决方案 (Troubleshooting)"></a>4. 常见问题与解决方案 (Troubleshooting)</h2><p><strong>问题 1：终端提示<code>conda: command not found</code></strong></p>
+<ul>
+<li><strong>原因</strong>：最常见的原因是<code>.bashrc</code>文件中的<code>source</code>命令路径不正确。</li>
+<li><strong>解决方案</strong>：<ol>
+<li> 请严格按照<strong>步骤一</strong>的方法，仔细核对<code>conda.sh</code>的实际路径。</li>
+<li> 在 Git Bash 中，使用<code>ls</code>命令验证路径的有效性，例如：<code>ls /c/Users/&lt;你的用户名&gt;/anaconda3/etc/profile.d/conda.sh</code>。如果此命令能成功列出文件名，则路径正确；否则请重新检查。</li>
+<li> 确认修改<code>.bashrc</code>后已<strong>完全重启 VSCode</strong>。</li>
+</ol>
+</li>
+</ul>
+<p><strong>问题 2：<code>.bashrc</code>文件似乎未被加载</strong></p>
+<ul>
+<li><strong>原因</strong>：在某些情况下，Git Bash 可能以“登录 Shell”(Login Shell)模式启动，此时它会加载<code>~/.bash_profile</code>或<code>~/.profile</code>文件，并可能忽略<code>.bashrc</code>。</li>
+<li><strong>解决方案</strong>：在<code>~/.bash_profile</code>中添加代码以使其主动加载<code>.bashrc</code>。<ol>
+<li> 执行<code>code ~/.bash_profile</code>打开文件。</li>
+<li>添加以下代码： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ -f ~/.bashrc ]; <span class="keyword">then</span></span><br><span class="line">   <span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></li>
+<li> 保存文件并重启 VSCode。</li>
+</ol>
+</li>
+</ul>
+<h2 id="5-结论"><a href="#5-结论" class="headerlink" title="5. 结论"></a>5. 结论</h2><p>通过以上步骤，您已成功构建了一个隔离、干净且高效的 Windows 开发环境。此配置方案遵循了 Conda 的最佳实践，避免了对系统全局环境的修改，同时在 VSCode 中提供了与原生 Linux 终端高度相似的开发体验。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>dslwind
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://dslwind.github.io/2025-08-11-Git_Bash-Conda/" title="">https://dslwind.github.io/2025-08-11-Git_Bash-Conda/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025-08-06-pycache/" rel="prev" title="删除**pycache**文件夹">
+                  <i class="fa fa-angle-left"></i> 删除**pycache**文件夹
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">dslwind</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">79k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:12</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/dslwind" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
