@@ -20,28 +20,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"dslwind.github.io","root":"/","images":"https://cdn.jsdelivr.net/gh/dslwind/CDN/images","scheme":"Gemini","darkmode":true,"version":"8.25.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"atom-one-light","dark":"atom-one-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeInLeft","sidebar":"fadeIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="干掉Win10系统开机开启防火墙提醒： 运行gpedit.msc 找到 计算机配置→管理模板→Windows 安全中心→通知→隐藏所有通知 设置为已启用。">
+    <meta name="description" content="编译好的 Docker 镜像，可以方便地打包成一个文件（tar 格式），然后在其他电脑上导入运行。这种方法非常适合在没有直接访问互联网或者网络环境受限的情况下，迁移 Docker 镜像。   以下是将 Docker 镜像打包（导出）和导入的步骤： 在源电脑（镜像已编译好）：  列出本地 Docker 镜像： 首先，你需要知道要导出的镜像的名称或 ID。  1docker images   你会看到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="烦人的 Windows 防火墙">
-<meta property="og:url" content="https://dslwind.github.io/2024-08-08-windows-firewall/">
+<meta property="og:title" content="Docker 迁移">
+<meta property="og:url" content="https://dslwind.github.io/2025-07-18-docker-transfer/">
 <meta property="og:site_name" content="水木风的个人博客">
-<meta property="og:description" content="干掉Win10系统开机开启防火墙提醒： 运行gpedit.msc 找到 计算机配置→管理模板→Windows 安全中心→通知→隐藏所有通知 设置为已启用。">
+<meta property="og:description" content="编译好的 Docker 镜像，可以方便地打包成一个文件（tar 格式），然后在其他电脑上导入运行。这种方法非常适合在没有直接访问互联网或者网络环境受限的情况下，迁移 Docker 镜像。   以下是将 Docker 镜像打包（导出）和导入的步骤： 在源电脑（镜像已编译好）：  列出本地 Docker 镜像： 首先，你需要知道要导出的镜像的名称或 ID。  1docker images   你会看到">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-08T04:00:00.000Z">
-<meta property="article:modified_time" content="2024-08-24T04:00:00.000Z">
+<meta property="article:published_time" content="2025-07-17T18:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-18T00:00:00.000Z">
 <meta property="article:author" content="dslwind">
-<meta property="article:tag" content="折腾">
-<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Docker">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dslwind.github.io/2024-08-08-windows-firewall/">
+<link rel="canonical" href="https://dslwind.github.io/2025-07-18-docker-transfer/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dslwind.github.io/2024-08-08-windows-firewall/","path":"2024-08-08-windows-firewall/","title":"烦人的 Windows 防火墙"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dslwind.github.io/2025-07-18-docker-transfer/","path":"2025-07-18-docker-transfer/","title":"Docker 迁移"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>烦人的 Windows 防火墙 | 水木风的个人博客</title>
+<title>Docker 迁移 | 水木风的个人博客</title>
   
 
 
@@ -192,7 +191,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2024-08-08-windows-firewall/">
+    <link itemprop="mainEntityOfPage" href="https://dslwind.github.io/2025-07-18-docker-transfer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/dslwind/CDN/images/avatar.jpg">
@@ -205,12 +204,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="烦人的 Windows 防火墙 | 水木风的个人博客">
+      <meta itemprop="name" content="Docker 迁移 | 水木风的个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          烦人的 Windows 防火墙
+          Docker 迁移
         </h1>
 
         <div class="post-meta-container">
@@ -220,15 +219,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-08-08 12:00:00" itemprop="dateCreated datePublished" datetime="2024-08-08T12:00:00+08:00">2024-08-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-08-24 12:00:00" itemprop="dateModified" datetime="2024-08-24T12:00:00+08:00">2024-08-24</time>
+      <time title="创建时间：2025-07-18 02:00:00 / 修改时间：08:00:00" itemprop="dateCreated datePublished" datetime="2025-07-18T02:00:00+08:00">2025-07-18</time>
     </span>
 
   
@@ -238,14 +231,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>167</span>
+      <span>2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -255,13 +248,76 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>干掉Win10系统开机开启防火墙提醒：</p>
-<p>运行gpedit.msc</p>
-<p>找到 <code>计算机配置</code>→<code>管理模板</code>→<code>Windows 安全中心</code>→<code>通知</code>→<code>隐藏所有通知</code></p>
-<p>设置为<code>已启用</code>。</p>
-<span id="more"></span>
+    <div class="post-body" itemprop="articleBody"><p>编译好的 Docker 镜像，可以方便地打包成一个文件（<code>tar</code> 格式），然后在其他电脑上导入运行。这种方法非常适合在没有直接访问互联网或者网络环境受限的情况下，迁移 Docker 镜像。</p>
+<!---more--->
 
-<p>Windows系统默认启用防火墙，在win10系统中，关闭防火墙后，即使安装了其他安全软件，每次开机都会有一条开启防火墙的通知，而且不能在设置中直接将其关闭，M$在恶心人方面一直是如此恶心。</p>
+<p>以下是将 Docker 镜像打包（导出）和导入的步骤：</p>
+<p><strong>在源电脑（镜像已编译好）：</strong></p>
+<ol>
+<li><p><strong>列出本地 Docker 镜像：</strong><br> 首先，你需要知道要导出的镜像的名称或 ID。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p> 你会看到一个列表，其中包含 <code>REPOSITORY</code>、<code>TAG</code>、<code>IMAGE ID</code>、<code>CREATED</code> 和 <code>SIZE</code> 等信息。</p>
+</li>
+<li><p><strong>导出镜像为 tar 文件：</strong><br> 使用 <code>docker save</code> 命令来将一个或多个镜像打包成一个 <code>.tar</code> 文件。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o &lt;output_filename.tar&gt; &lt;image_name&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 或者使用 Image ID：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o &lt;output_filename.tar&gt; &lt;image_id&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>示例：</strong><br> 假设你要导出的镜像是 <code>my-custom-app:latest</code>，并且你想将其保存为 <code>my-custom-app.tar</code>：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o my-custom-app.tar my-custom-app:latest</span><br></pre></td></tr></table></figure>
+
+<p> 或者使用 Image ID（例如 <code>a1b2c3d4e5f6</code>）：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o my-custom-app.tar a1b2c3d4e5f6</span><br></pre></td></tr></table></figure>
+
+<p> 这个命令会将所有包含这个镜像的层都打包到一个文件中。</p>
+<p> <strong>导出多个镜像：</strong><br> 如果你想导出多个镜像，可以重复使用 <code>-o</code> 和指定多个镜像名/ID：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o my-apps.tar my-custom-app:latest another-app:v1.0</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>传输 tar 文件：</strong><br> 将生成的 <code>my-custom-app.tar</code> 文件通过 U 盘、网络共享、FTP 等方式传输到目标电脑上。</p>
+</li>
+</ol>
+<p><strong>在目标电脑上：</strong></p>
+<ol>
+<li><p><strong>将 tar 文件传输到目标电脑：</strong><br> 将你在源电脑上打包好的 <code>.tar</code> 文件复制到目标电脑上。</p>
+</li>
+<li><p><strong>导入镜像：</strong><br> 使用 <code>docker load</code> 命令来加载这个 <code>.tar</code> 文件，它会将里面的镜像导入到目标电脑的 Docker 守护进程中。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -i &lt;input_filename.tar&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>示例：</strong><br> 假设你将 <code>my-custom-app.tar</code> 文件复制到了目标电脑的当前目录下：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -i my-custom-app.tar</span><br></pre></td></tr></table></figure>
+
+<p> 这个命令会输出正在加载的镜像层信息，最后显示导入成功的镜像名称和标签。</p>
+</li>
+<li><p><strong>验证导入的镜像：</strong><br> 使用 <code>docker images</code> 命令来查看目标电脑上的 Docker 镜像列表，确认你的自定义镜像已经被成功导入。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p> 你应该能看到 <code>my-custom-app:latest</code>（或者你导出的名称和标签）。</p>
+</li>
+<li><p><strong>运行导入的镜像：</strong><br> 现在你可以像使用其他任何 Docker 镜像一样，运行你刚刚导入的镜像了。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run &lt;image_name&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 或者如果你之前是使用 <code>docker-compose</code> 构建并运行的，你可以在目标电脑上有一个相应的 <code>docker-compose.yml</code> 文件，它引用了你刚刚导入的镜像（如果 <code>docker-compose.yml</code> 文件中直接引用了镜像名，而没有 <code>build</code> 指令）。</p>
+<p> <strong>示例：</strong></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run my-custom-app:latest</span><br></pre></td></tr></table></figure>
+
+<p> 如果你有 <code>docker-compose.yml</code> 文件，并且该文件是直接引用镜像名（而不是 <code>build</code> 指令），那么 <code>docker-compose up</code> 应该就能直接工作。</p>
+</li>
+</ol>
+<p><strong>优点：</strong></p>
+<ul>
+<li><strong>离线迁移：</strong> 适用于没有互联网连接或网络受限的环境。</li>
+<li><strong>快速部署：</strong> 比在目标电脑上重新构建镜像（特别是如果构建过程复杂或耗时）要快得多。</li>
+<li><strong>版本控制：</strong> 可以将特定的镜像版本打包，确保部署的一致性。</li>
+</ul>
+<p><strong>注意事项：</strong></p>
+<ul>
+<li><strong>镜像大小：</strong> 镜像文件可能会很大，尤其是包含完整操作系统和许多库的镜像。传输可能需要一些时间。</li>
+<li><strong>依赖关系：</strong> <code>docker save</code> 只保存了镜像本身，不包含任何其他 Docker Compose 服务或外部依赖。如果你导出的是一个需要特定网络配置或数据库服务的镜像，你需要确保目标电脑上也有相应的配置和运行环境。</li>
+<li><strong>Docker 版本兼容性：</strong> 通常情况下，不同版本的 Docker 之间兼容性很好。但非常老旧的版本和新版本之间可能存在一些细微的差异，尽管这种情况很少见。</li>
+<li><strong>Windows 上的 Docker Desktop：</strong> 在 Windows 上，Docker Desktop 负责管理 Docker 守护进程（通常运行在 WSL 2 中）。<code>docker save</code> 和 <code>docker load</code> 命令是 Docker CLI 发送给 Docker Daemon 的指令，它们会正确处理 WSL 2 的后端。</li>
+</ul>
+<p>通过 <code>docker save</code> 和 <code>docker load</code>，你可以非常方便地在不同电脑之间迁移 Docker 镜像，非常实用。</p>
 
     </div>
 
@@ -279,7 +335,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://dslwind.github.io/2024-08-08-windows-firewall/" title="烦人的 Windows 防火墙">https://dslwind.github.io/2024-08-08-windows-firewall/</a>
+      <a href="https://dslwind.github.io/2025-07-18-docker-transfer/" title="Docker 迁移">https://dslwind.github.io/2025-07-18-docker-transfer/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -288,21 +344,20 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/%E6%8A%98%E8%85%BE/" rel="tag"><i class="fa fa-tag"></i> 折腾</a>
-              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+              <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024-06-26-anaconda/" rel="prev" title="Anaconda相关">
-                  <i class="fa fa-angle-left"></i> Anaconda相关
+                <a href="/2025-07-03-wsl-disk/" rel="prev" title="WSL2 VHDX 空间回收解决方案">
+                  <i class="fa fa-angle-left"></i> WSL2 VHDX 空间回收解决方案
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025-04-16-duokan_epub/" rel="next" title="自制多看电子书">
-                  自制多看电子书 <i class="fa fa-angle-right"></i>
+                <a href="/2025-08-06-pycache/" rel="next" title="删除**pycache**文件夹">
+                  删除**pycache**文件夹 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
